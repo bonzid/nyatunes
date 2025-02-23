@@ -32,6 +32,7 @@ Le lecteur est basé sur HTML, CSS, JavaScript pour l’interface et utilise PHP
 [] lecture de la musique à n'importe quel moment de la progression
 [] revoir coloration de la barre selon progression
 [] ajout d'une soundwave
+[] fonction shuffle !!!
 
 
 ## Crédits
