@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>NyaTunes ⋆.𐙚˚</title>
+</head>
+<body>
+    <div class="wrapper">
+
+    <div class="background-left"></div>
+
+    <div class="player">
+        <div class="artemis"><img src="images/artemis.jpg"></div>
+
+        <audio id="audio"></audio>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" value="0" min="0" max="100" step="0.1">
+            <span id="duration">0:00</span>
+        </div>
+
+        <h2 class="titre"><span id="song-title">Titre de la musique - Test ♥</spans></h2>
+
+        <div class="controls">
+            <button id="liste"><img src="images/list.png"></button>
+            <button onclick="prevSong()" id="prev"><img src="images/prevsong.png"></button>
+            <button id="playpause"><img src="images/play.png"></button>
+            <button onclick="nextSong()" id="next"><img src="images/nextsong.png"></button>
+            <button id="nya"><img src="images/cat.png"></button>
+        </div>
+
+        <div id="playlist" class="playlist">
+            <ul id="playlist-list"></ul>
+        </div>
+
+        <div class="volume-bar">
+            <input type="range" id="volume-bar" value="100" min="0" max="100" step="1">
+        </div>
+    </div>
+
+
+    <div class="background-right"></div>
+    </div>
+</body>
+
+<script src="scripts/script.js"></script>
+</html>

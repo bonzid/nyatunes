@@ -1,0 +1,325 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url("../fonts/Quicksand/static/Quicksand-Medium.ttf");
+    font-weight: 300;
+  }
+
+body {
+    text-align: center;
+    background: #F1E4F3;
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    height: 100vh;
+    margin: 0;
+    cursor: url('../images/cursor.png'), auto;
+}
+
+/*BACKGROUND*/
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;  
+}
+
+.background-left, .background-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%; 
+    background-size:cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+.background-left {
+    left: 0;
+    background-image: url('../images/background-left.png');
+    /*transform: rotate(-90deg);*/
+    /*transform-origin: center;*/
+    width: 30%;  
+}
+
+.background-right {
+    right: 0;
+    background-image: url('../images/background-right.png');
+    transform: rotate(180deg);
+    /*transform-origin: center;*/
+    height:100%;
+    width: 30%; 
+}
+
+/*IMG COVER*/
+.artemis img {
+    max-width: 70%; 
+    height: auto; 
+    border-radius: 20px; 
+    object-fit: cover; 
+    margin-bottom: 30px;
+}
+
+
+/*TITRE DE LA MUSIQUE*/
+.titre {
+    font-family: 'Quicksand', sans-serif;
+    color: #F686BD;
+    margin-top: 20px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    width: 80%;  
+}
+
+.titre span {
+    display: inline-block;
+    animation: defilement 10s linear infinite;
+    /*mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);*/
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+/*LECTEUR AUDIO*/
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:600px;
+    z-index: 1;
+    background: #F1E4F3;
+}
+
+/*SECTION CONTROLES*/
+.controls {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    height: 150px; 
+    width: 50%;   
+}
+
+.controls button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.controls button img {
+    width: 150px; 
+    height: auto;
+    display: block;
+}
+
+.player{
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#liste img{
+    width: 70px;
+    height: auto;
+    object-fit: cover; 
+}
+
+#prev img, #next img {
+    width: 100px;
+    height: auto;
+    object-fit: cover; 
+}
+
+#playpause img {
+    width: 120px;
+    height: auto;
+    object-fit: cover; 
+}
+
+#nya img {
+    width: 80px; 
+    height: auto;
+    object-fit: cover; 
+}
+
+/*PLAYLIST*/
+.playlist {
+    display: none; /*masqué par défaut*/
+    position: absolute;
+    background-color: #F4BBD3;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 20%;
+    margin-top: 550px;
+    margin-right:930px;
+    border-radius: 20px; 
+    border:#F1E4F3;
+}
+
+.playlist ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.playlist li {
+    padding: 5px;
+    color: white;
+    font-family:'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+.playlist li:hover {
+    background-color: #F686BD;
+}
+
+
+
+
+/*BARRE DE PROGRESSION*/
+/* Conteneur de la barre de progression */
+.progress-container {
+    width: 80%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+#current-time, #duration{
+    font-family:'Quicksand', sans-serif;
+    color:#F686BD;
+}
+
+/* Barre*/
+#progress {
+    width: 80%; 
+    margin: 0 auto; 
+    cursor: pointer; 
+    -webkit-appearance: none; 
+    appearance: none; 
+    background: transparent; 
+}
+
+#progress::-webkit-slider-runnable-track {
+    height: 5px; 
+    border-radius: 5px; 
+    background: linear-gradient(
+        /*NE MARCHE PAS*/
+        to right, 
+        #F686BD 0%, 
+        #F686BD var(--progress), 
+        #F4BBD3 var(--progress),
+        #F4BBD3 100%
+    );
+}
+
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; 
+    height: 15px; 
+    background: #F686BD; 
+    border-radius: 50%;
+    cursor: pointer; 
+    margin-top: -5px;
+}
+
+/*Pour Firefox*/
+#progress::-moz-range-track {
+    height: 5px; 
+    border-radius: 5px;
+    /*NE MARCHE PAS*/
+    background: linear-gradient(
+        to right, 
+        #F686BD 0%, 
+        #F686BD var(--progress), 
+        #F4BBD3 var(--progress), 
+        #F4BBD3 100% 
+    );
+}
+
+#progress::-moz-range-thumb {
+    width: 15px; 
+    height: 15px; 
+    background: #F686BD; 
+    border-radius: 50%;
+    cursor: pointer; 
+    border: none;
+}
+
+#progress::-webkit-slider-runnable-track {
+    transition: background 0.2s ease;
+}
+
+#progress::-moz-range-track {
+    transition: background 0.2s ease;
+}
+
+
+/*BARRE DE VOLUME*/
+/* Conteneur de la barre de volume */
+.volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espace entre l'icône et la barre de volume */
+    margin-top: 20px; /* Espacement par rapport aux autres éléments */
+    height: 40px;
+}
+
+
+/* Barre de volume */
+#volume-bar {
+    width: 100px; /* Largeur de la barre de volume */
+    -webkit-appearance: none; /* Désactive le style par défaut pour WebKit */
+    appearance: none; /* Désactive le style par défaut pour les autres navigateurs */
+    background: transparent; /* Fond transparent pour la barre */
+    cursor: pointer; /* Change le curseur en main pointer */
+}
+
+/* Style de la piste pour WebKit (Chrome, Safari) */
+#volume-bar::-webkit-slider-runnable-track {
+    height: 5px; /* Hauteur de la piste */
+    border-radius: 5px; /* Coins arrondis */
+    background: #F4BBD3; /* Couleur de fond de la piste */
+}
+
+/* Style du curseur pour WebKit (Chrome, Safari) */
+#volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Désactive le style par défaut */
+    appearance: none; /* Désactive le style par défaut (version standard) */
+    width: 15px; /* Largeur du curseur */
+    height: 15px; /* Hauteur du curseur */
+    background: #F686BD; /* Couleur de fond du curseur */
+    border-radius: 50%; /* Rend le curseur circulaire */
+    cursor: pointer; /* Change le curseur de la souris en main pointer */
+    margin-top: -5px; /* Centre le curseur verticalement */
+}
+
+/* Style de la piste pour Firefox */
+#volume-bar::-moz-range-track {
+    height: 5px; /* Hauteur de la piste */
+    border-radius: 5px; /* Coins arrondis */
+    background: #F4BBD3; /* Couleur de fond de la piste */
+}
+
+/* Style du curseur pour Firefox */
+#volume-bar::-moz-range-thumb {
+    width: 15px; /* Largeur du curseur */
+    height: 15px; /* Hauteur du curseur */
+    background: #F686BD; /* Couleur de fond du curseur */
+    border-radius: 50%; /* Rend le curseur circulaire */
+    cursor: pointer; /* Change le curseur de la souris en main pointer */
+    border: none; /* Supprime la bordure par défaut */
+}
