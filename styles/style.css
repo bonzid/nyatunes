@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;  
+    height: 100vh;
 }
 
 .background-left, .background-right {
@@ -33,7 +33,7 @@ body {
     background-size:cover; 
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .background-left {
@@ -52,6 +52,8 @@ body {
     height:100%;
     width: 30%; 
 }
+
+
 
 /*IMG COVER*/
 .artemis img {
@@ -126,13 +128,24 @@ body {
     border-radius: 15px;
 }
 
-#liste img{
-    width: 70px;
-    height: auto;
-    object-fit: cover; 
+/* Conteneur des boutons "liste" et "shuffle" */
+.list-shuffle-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    margin-right: 5px;
 }
 
-#prev img, #next img {
+/* Styles pour les images des boutons "liste" et "shuffle" */
+#liste img,
+#shuffle img {
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+}
+
+#prev img,#next img {
     width: 100px;
     height: auto;
     object-fit: cover; 
@@ -200,7 +213,7 @@ body {
     color:#F686BD;
 }
 
-/* Barre*/
+/*Barre*/
 #progress {
     width: 80%; 
     margin: 0 auto; 
@@ -212,9 +225,10 @@ body {
 
 #progress::-webkit-slider-runnable-track {
     height: 5px; 
-    border-radius: 5px; 
+    border-radius: 5px;
+    transition: background 0.2s ease;
     background: linear-gradient(
-        /*NE MARCHE PAS*/
+        /*NE MARCHE PAS BUG*/
         to right, 
         #F686BD 0%, 
         #F686BD var(--progress), 
@@ -239,13 +253,14 @@ body {
 #progress::-moz-range-track {
     height: 5px; 
     border-radius: 5px;
-    /*NE MARCHE PAS*/
+    transition: background 0.2s ease;
+    /*NE MARCHE PAS BUG*/
     background: linear-gradient(
         to right, 
         #F686BD 0%, 
         #F686BD var(--progress), 
-        #F4BBD3 var(--progress), 
-        #F4BBD3 100% 
+        #F686BD var(--progress), 
+        #F686BD 100% 
     );
 }
 

@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
 
-    <div class="background-left"></div>
+        <div class="background-left"></div>
 
     <div class="player">
         <div class="artemis"><img src="images/artemis.jpg"></div>
@@ -25,7 +25,10 @@
         <h2 class="titre"><span id="song-title">Titre de la musique - Test ♥</spans></h2>
 
         <div class="controls">
-            <button id="liste"><img src="images/list.png"></button>
+            <div class="list-shuffle-container">
+                <button id="shuffle"><img src="images/shuffle.png"></button>
+                <button id="liste"><img src="images/list.png"></button>
+            </div>
             <button onclick="prevSong()" id="prev"><img src="images/prevsong.png"></button>
             <button id="playpause"><img src="images/play.png"></button>
             <button onclick="nextSong()" id="next"><img src="images/nextsong.png"></button>
@@ -41,9 +44,9 @@
         </div>
     </div>
 
-
     <div class="background-right"></div>
     </div>
+
 </body>
 
 <script src="scripts/script.js"></script>
