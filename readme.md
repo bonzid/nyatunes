@@ -25,11 +25,10 @@ Le lecteur est basé sur HTML, CSS, JavaScript pour l’interface et utilise PHP
 - [x] changement du visuel du lecteur audio
 - [ ] changement des curseurs
 - [ ] ajout d'un mode nuit
-- [ ] fondue au défilement du titre
 - [ ] revoir gestion de l'arrière-plan
 - [ ] lecture de la musique à n'importe quel moment de la progression
 - [ ] revoir coloration de la barre selon progression
-- [x] fonction shuffle !!!
+- [x] fonction shuffle
 - [x] ajout de la lecture automatique
 
 
