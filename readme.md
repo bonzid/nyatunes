@@ -7,7 +7,7 @@ NyaTunes est un lecteur de musique minimaliste, conçu pour offrir une expérien
 ## Fonctionnement général
 NyaTunes permet de :
 
-- Charger dynamiquement tous les fichiers audio d’un dossier (songs/)
+- Charger dynamiquement tous les fichiers audio d’un dossier à créer (songs/)
 - Lire, mettre en pause et naviguer entre les pistes via une interface légère (et mignonne !)
 - Fonctionner directement dans un navigateur, sans nécessiter de logiciel tiers
 Le lecteur est basé sur HTML, CSS, JavaScript pour l’interface et utilise PHP pour récupérer la liste des musiques disponibles.
