@@ -1,5 +1,7 @@
 # NyaTunes
-NyaTunes est un lecteur de musique minimaliste, conçu pour offrir une expérience simple et fluide sans interruptions publicitaires. Ce projet personnel a été motivé par la frustration liée aux plateformes de streaming comme YouTube ou Spotify, où les publicités et autres restrictions tendent à se multiplier. 
+NyaTunes est un lecteur de musique minimaliste, conçu pour offrir une expérience simple et fluide. Ce projet personnel a été motivé par la frustration liée aux plateformes de streaming comme YouTube ou Spotify, où les publicités et autres restrictions tendent à se multiplier. 
+
+![ Aperçu de la plateforme](/images/preview.png "Aperçu de la plateforme") 
 
 ✩°｡⋆⸜ 🎧
 
@@ -7,7 +9,7 @@ NyaTunes est un lecteur de musique minimaliste, conçu pour offrir une expérien
 ## Fonctionnement général
 NyaTunes permet de :
 
-- Charger dynamiquement tous les fichiers audio d’un dossier à créer (songs/)
+- Charger dynamiquement tous les fichiers audio (.mp3) d’un dossier (à vider depuis ce dépôt puis à remplir avec vos musiques favorites, songs/)
 - Lire, mettre en pause et naviguer entre les pistes via une interface légère (et mignonne !)
 - Fonctionner directement dans un navigateur, sans nécessiter de logiciel tiers
 Le lecteur est basé sur HTML, CSS, JavaScript pour l’interface et utilise PHP pour récupérer la liste des musiques disponibles.
@@ -17,20 +19,19 @@ Le lecteur est basé sur HTML, CSS, JavaScript pour l’interface et utilise PHP
 
 - Nécessite PHP 8.3.9 ou une version supérieure pour fonctionner
 - Compatible avec tous les navigateurs modernes (Chrome, Firefox, Edge, etc.)
-- Hébergé localement sur un serveur Apache (via XAMPP, WAMP, ou PHP natif)
+- A héberger localement sur un serveur Apache (via XAMPP, WAMP, ou PHP natif)
 
 
 ## To-do liste
 
 - [x] changement du visuel du lecteur audio
+- [x] fonction shuffle
+- [x] ajout de la lecture automatique
 - [ ] changement des curseurs
 - [ ] ajout d'un mode nuit
 - [ ] revoir gestion de l'arrière-plan
 - [ ] lecture de la musique à n'importe quel moment de la progression
 - [ ] revoir coloration de la barre selon progression
-- [x] fonction shuffle
-- [x] ajout de la lecture automatique
-
 
 ## Crédits
 
