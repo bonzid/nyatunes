@@ -12,6 +12,7 @@ NyaTunes permet de :
 - Charger dynamiquement tous les fichiers audio (.mp3) d’un dossier (à vider depuis ce dépôt puis à remplir avec vos musiques favorites, songs/)
 - Lire, mettre en pause et naviguer entre les pistes via une interface légère (et mignonne !)
 - Fonctionner directement dans un navigateur, sans nécessiter de logiciel tiers
+  
 Le lecteur est basé sur HTML, CSS, JavaScript pour l’interface et utilise PHP pour récupérer la liste des musiques disponibles.
 
 
