@@ -1,5 +1,5 @@
 # NyaTunes
-NyaTunes est un lecteur de musique minimaliste, conçu pour offrir une expérience simple et fluide. Ce projet personnel a été motivé par la frustration liée aux plateformes de streaming comme YouTube ou Spotify, où les publicités et autres restrictions tendent à se multiplier. 
+NyaTunes est un lecteur de musique plutôt minimaliste, pour une expérience simple et fluide. Ce projet personnel a été motivé par la frustration liée aux plateformes comme YouTube ou Spotify, où les publicités et autres restrictions tendent à se multiplier (et ça me saoule). 
 
 ![ Aperçu de la plateforme](/images/preview.png "Aperçu de la plateforme") 
 
